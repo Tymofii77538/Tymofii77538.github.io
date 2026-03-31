@@ -1,0 +1,59 @@
+body {
+    background: linear-gradient(135deg, #e0f2f1 0%, #ffffff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); 
+    padding: 50px 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    font-weight: 300;
+    color: #2e8b57;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+.btn {
+    display: block;
+    background-color: #2e8b57; 
+    color: white;
+    padding: 14px;
+    margin: 12px 0;
+    text-decoration: none;
+    border-radius: 50px; 
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(46, 139, 87, 0.2);
+}
+
+.btn:hover {
+    background-color: #246d45;
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(46, 139, 87, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #2e8b57;
+    border: 2px solid #2e8b57;
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    background-color: #2e8b57;
+    color: white;
+}
