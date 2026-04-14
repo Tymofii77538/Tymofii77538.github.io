@@ -59,6 +59,26 @@ img:hover {
     transform: scale(1.05);
     border-color: #1b4332; 
 }
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: inherit; 
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#themeButton, #toggleSectionButton {
+    background-color: #2e8b57;
+    color: white;
+}
+
+#themeButton:hover, #toggleSectionButton:hover {
+    background-color: #1b4332;
+    transform: translateY(-2px);
+}
 
 
 footer {
