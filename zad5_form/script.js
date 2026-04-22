@@ -14,14 +14,13 @@ const form = document.getElementById('contactForm');
 form.addEventListener('submit', function(e) {
     e.preventDefault(); 
     
-    console.log("Validation started..."); // Check your F12 console for this!
+    console.log("Validation started..."); 
 
     document.querySelectorAll('.error-text').forEach(el => el.innerText = '');
     
     let isValid = true;
-    const nameRegex = /\d/; // Requirement: No digits in names
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Requirement: Email format
-
+    const nameRegex = /\d/; 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
     const firstName = document.getElementById('firstName').value.trim();
     const lastName = document.getElementById('lastName').value.trim();
     const email = document.getElementById('email').value.trim();
