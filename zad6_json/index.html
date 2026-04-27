@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Tymofii Chornopolskyi</title>
+    <link rel="stylesheet" href="green.css"> 
+</head>
+<body>
+
+<header>
+    <h1>Tymofii Chornopolskyi</h1>
+    <img src="me.jpg" alt="Profile Photo">
+    
+    <div class="controls">
+        <button id="themeButton">Zmień Motyw</button>
+        <button id="toggleSectionButton">Pokaż/Ukryj Listy</button>
+    </div>
+</header>
+
+<main>
+    <div id="dynamicContent">
+        <h2>Moje Portfolio (ID: 77538)</h2>
+        
+        <section id="listsSection">
+            <h3>Umiejętności</h3>
+            <ul id="skillsList"></ul>
+            <h3>Projekty</h3>
+            <ul id="projectsList"></ul>
+        </section>
+    </div>
+
+    <section>
+        <h2>Kontakt</h2>
+        <form id="contactForm" novalidate>
+            <input type="text" id="firstName" placeholder="Imię">
+            <span id="firstNameError" class="error"></span>
+            
+            <input type="text" id="lastName" placeholder="Nazwisko">
+            <span id="lastNameError" class="error"></span>
+            
+            <input type="email" id="email" placeholder="Email">
+            <span id="emailError" class="error"></span>
+            
+            <textarea id="message" placeholder="Wiadomość"></textarea>
+            <span id="messageError" class="error"></span>
+            
+            <button type="submit">Wyślij</button>
+        </form>
+        <p id="successMessage"></p>
+    </section>
+</main>
+<script src="script.js"></script>
+
+<footer>
+    <p>© 2026 Tymofii Chornopolskyi</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
