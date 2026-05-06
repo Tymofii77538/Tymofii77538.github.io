@@ -1,0 +1,16 @@
+{
+  "studentId": "77538",
+  "skills": [
+    "C# i Windows Forms",
+    "SQL (T-SQL, SQL Server)",
+    "Python (Automatyzacja)",
+    "HTML i CSS",
+    "Podstawy elektroniki cyfrowej"
+  ],
+  "projects": [
+    "AnalizatorIndywidualny (C#)",
+    "Baza danych CarRentalDB (SQL)",
+    "Symulator bankomatu (C#)",
+    "Skrypty automatyzujące (Python)"
+  ]
+}
