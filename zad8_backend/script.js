@@ -1,6 +1,6 @@
 // Numer albumu: 77538
 
-// --- ZADANIE 4: Przełączanie motywów i widoczności sekcji ---
+// task 4
 const themeBtn = document.getElementById('themeButton');
 const toggleBtn = document.getElementById('toggleSectionButton');
 const themeLink = document.querySelector('link[rel="stylesheet"]');
@@ -8,7 +8,6 @@ const sectionToToggle = document.getElementById('listsSection');
 
 if (themeBtn) {
     themeBtn.addEventListener('click', () => {
-        // Zmiana między arkuszami red.css i green.css
         const current = themeLink.getAttribute('href');
         themeLink.setAttribute('href', current === 'red.css' ? 'green.css' : 'red.css');
     });
@@ -16,18 +15,17 @@ if (themeBtn) {
 
 if (toggleBtn) {
     toggleBtn.addEventListener('click', () => {
-        // Ukrywanie lub pokazywanie sekcji list
         sectionToToggle.style.display = sectionToToggle.style.display === 'none' ? 'block' : 'none';
     });
 }
 
-// --- ZADANIE 8: Komunikacja Frontend -> Backend (Zastępuje Zadanie 5) ---
+// task 8
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Zatrzymanie odświeżania strony
+        e.preventDefault(); 
         
-        // Resetowanie komunikatów o błędach
+        
         document.querySelectorAll('.error').forEach(el => el.innerText = '');
         
         const fName = document.getElementById('firstName').value;
@@ -35,13 +33,11 @@ if (contactForm) {
         const email = document.getElementById('email').value;
         const msg = document.getElementById('message').value;
 
-        // Walidacja pól formularza
         if (!fName || !lName || !email || !msg) {
             alert("Wszystkie pola są wymagane!");
             return;
         }
 
-        // Przygotowanie obiektu z danymi do wysłania
         const payload = {
             firstName: fName,
             lastName: lName,
@@ -51,7 +47,6 @@ if (contactForm) {
         };
 
         try {
-            // 1. Wysłanie danych metodą POST do zewnętrznego serwera
             const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
                 method: 'POST',
                 body: JSON.stringify(payload),
@@ -59,7 +54,6 @@ if (contactForm) {
             });
 
             if (response.ok) {
-                // 3. Potwierdzenie poprawnego wysłania danych
                 document.getElementById('successMessage').innerText = "Dane pomyślnie wysłane na serwer (ID: 77538)!";
                 document.getElementById('successMessage').style.color = "green";
                 contactForm.reset();
@@ -70,7 +64,7 @@ if (contactForm) {
     });
 }
 
-// --- ZADANIE 6: Ładowanie danych z pliku JSON ---
+// task 6
 async function loadData() {
     try {
         const response = await fetch('data.json');
@@ -80,7 +74,7 @@ async function loadData() {
         const pList = document.getElementById('projectsList');
 
         if (sList) {
-            sList.innerHTML = ''; // Wyczyszczenie listy przed dodaniem
+            sList.innerHTML = ''; 
             data.skills.forEach(s => {
                 const li = document.createElement('li');
                 li.textContent = s;
@@ -102,7 +96,7 @@ async function loadData() {
 }
 loadData();
 
-// --- ZADANIE 7: Zarządzanie zadaniami (LocalStorage) ---
+// task 7
 document.addEventListener('DOMContentLoaded', () => {
     const taskInput = document.getElementById('taskInput');
     const addTaskBtn = document.getElementById('addTaskBtn');
